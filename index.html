@@ -14,6 +14,10 @@ Author URL: http://w3layouts.com
     <link href="//fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
     <!-- Template CSS -->
     <link rel="stylesheet" href="assets/css/style-starter.css">
+    <link href="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+    " rel="stylesheet">
+    
 </head>
 
 <body>
@@ -139,37 +143,34 @@ Author URL: http://w3layouts.com
                 <h6 class="title-subw3hny">What We Do</h6>
                 <h3 class="title-w3l mb-4">What We’re Offering</h3>
             </div>
-            <div class="grids-of-3 row text-center">
-                <div class="col-lg-4 col-md-6 mt-5">
-                    <div class="grids3-info">
-                        <a href="#service" class="d-block zoom"><img src="assets/images/a4.jpg" alt="" class="img-fluid radius-image"></a>
-                        <div class="grids-of-3-saas-info">
-                            <h5><a href="#service" class="title">Offset Printing</a></h5>
-                            <p class="saas-para"> High-quality, cost-effective prints for large-scale projects like publications, brochures, and catalogs.                            </p>
-                        </div>
-                    </div>
+            
+            <section class="splide" id="service_slider" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                      <ul class="splide__list">
+
+
+                          <li class="splide__slide p-2">
+
+                            <div class="grids3-info">
+                                <a href="#service" class="d-block zoom"><img src="https://source.unsplash.com/475x350/?poster print" alt="" class="img-fluid radius-image"></a>
+                                <div class="p-3 text-center text-wrap rounded-bottom" style="background: rgb(245,253,45);
+                                background: linear-gradient(66deg, rgba(245,253,45,1) 0%, rgba(253,187,45,1) 38%);">
+                                    <h3  class=" text-wrap ">service sample</h3>
+                                </div>
+                            </div>
+
+                          </li>
+
+
+
+             
+
+
+
+                      </ul>
                 </div>
-                <div class="col-lg-4 col-md-6 mt-5">
-                    <div class="grids3-info">
-                        <a href="#service" class="d-block zoom"><img src="assets/images/a5.jpg" alt="" class="img-fluid radius-image"></a>
-                        <div class="grids-of-3-saas-info">
-                            <h5><a href="#service" class="title">Quality Standards</a></h5>
-                            <p class="saas-para"> Venenatis eros et, sed commodo risus. Nullam sit
-                                amet laoreet elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mt-5">
-                    <div class="grids3-info">
-                        <a href="#service" class="d-block zoom"><img src="assets/images/a6.jpg" alt="" class="img-fluid radius-image"></a>
-                        <div class="grids-of-3-saas-info">
-                            <h5><a href="#service" class="title">Organic Services</a></h5>
-                            <p class="saas-para"> Venenatis eros et, sed commodo risus. Nullam sit
-                                amet laoreet elit.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+              </section>
+
         </div>
     </section>
     <!--//w3l-grids-3hny-->
@@ -440,6 +441,8 @@ Author URL: http://w3layouts.com
     <script src="assets/js/theme-change.js"></script>
     <script src="assets/js/circles.js"></script>
 
+
+
     <!-- MENU-JS -->
     <script>
         $(window).on("scroll", function() {
@@ -482,6 +485,27 @@ Author URL: http://w3layouts.com
     <!-- //disable body scroll which navbar is in active -->
     <!-- //bootstrap -->
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+
+
+    <script>
+        const splide = new Splide( '#service_slider', {
+            type   : 'loop',
+            drag   : 'free',
+            pauseOnHover: false,
+            pauseOnFocus:false,
+            arrows: false,
+            pagination: false,
+            perPage: 3,
+            autoScroll: {
+                speed: 2,
+            },
+        } );
+
+            splide.mount(window.splide.Extensions );
+    </script>
+
 
 </body>
 
